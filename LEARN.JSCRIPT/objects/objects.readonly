@@ -1,0 +1,154 @@
+//General Methods
+
+// Copies properties from a source object to a target object
+//Object.assign(target, source)
+
+// Creates an object from an existing object
+Object.create(object)
+
+// Returns an array of the key/value pairs of an object
+Object.entries(object)
+
+// Creates an object from a list of keys/values
+Object.fromEntries()
+
+// Returns an array of the keys of an object
+Object.keys(object)
+
+// Returns an array of the property values of an object
+Object.values(object)
+
+// Groups object elements according to a function
+Object.groupBy(object, callback)
+
+
+//Property Management Methods
+
+// Adding or changing an object property
+Object.defineProperty(object, property, descriptor)
+
+// Adding or changing object properties
+Object.defineProperties(object, descriptors)
+
+// Accessing a Property
+Object.getOwnPropertyDescriptor(object, property)
+
+// Accessing Properties
+Object.getOwnPropertyDescriptors(object)
+
+// Returns all properties as an array
+Object.getOwnPropertyNames(object)
+
+// Accessing the prototype
+Object.getPrototypeOf(object)
+ 
+
+JavaScript for...in Loop
+The JavaScript for...in statement loops through the properties of an object.
+
+Syntax
+for (let variable in object) {
+  // code to be executed
+}
+The block of code inside of the for...in loop will be executed 
+once for each property.
+Looping through the properties of an object:
+
+
+
+<script>
+const person = {
+  fname:"John",
+  lname:"Doe",
+  age:25
+}; 
+
+let txt = "";
+for (let x in person) {
+  txt += person[x] + " ";
+}
+
+document.getElementById("demo").innerHTML = txt;
+</script>
+
+
+1. First part: 
+   javascript
+   const person = {
+     fname: "John",
+     lname: "Doe",
+     age: 25
+   };
+   
+   This part is creating a "person" object. 
+   It's like a box where we keep details about a person:
+   - `fname` (first name) is "John"
+   - `lname` (last name) is "Doe"
+   - `age` is 25
+
+2. Second part:
+   javascript
+   let txt = "";
+   for (let x in person) {
+     txt += person[x] + " ";
+   }
+   
+   Now we start with an empty string called `txt` 
+   (it's like a blank sheet of paper).
+   
+   The `for` loop is like going through each piece of 
+   information about the person one by one:
+   - First, it looks at the first name ("John").
+   - Then, it looks at the last name ("Doe").
+   - Finally, it looks at the age (25).
+
+   Each piece is added to `txt` with a space between them, 
+   so `txt` becomes `"John Doe 25 "`.
+
+3. Last part:
+   javascript
+   document.getElementById("demo").innerHTML = txt;
+   
+   This part finds an element on the webpage with the name "demo" 
+   and puts the text `txt` (which is `"John Doe 25 "`) inside that element, 
+   so when you run the code, it will show "John Doe 25" on the webpage.
+
+In short: The code takes details about a person (name and age), 
+mixes them together, and shows it on the screen.
+
+
+JavaScript Object.defineProperty()
+The Object.defineProperty() method can be used to:
+
+Adding a new property to an object
+Changing property values
+Changing property metadata
+Changing object getters and setters
+
+Syntax:
+Object.defineProperty(object, property, descriptor)
+
+JavaScript getOwnPropertyNames()
+The Object.getOwnPropertyNames() method can:
+List object properties
+
+Syntax:
+Object.getOwnPropertyNames(object)
+
+
+
+Note
+The getOwnPropertyNames() method returns all properties.
+The Object.keys() method returns all enumerable properties.
+
+If you define object properties without enumerable:false, 
+the two methods will return the same.
+
+
+
+JavaScript Accessors (Getters and Setters)
+ECMAScript 5 (ES5 2009) introduced Getter and Setters.
+
+Getters and setters allow you to define 
+Object Accessors (Computed Properties).
+

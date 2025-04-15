@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Swizfcodes(coin flip)</title>
+</head>
+
+<style>
+
+body{
+  margin-top: 20px;
+  margin-left: 200px;
+  display: flex;
+}
+
+
+.overallcontainer1{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 400px;
+  border-radius: 20px;
+  background: transparent;
+}
+
+h2{
+  font-weight: bolder;
+  font-style: oblique;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding-left: 100px;
+}
+
+.inputdiv{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.inputdiv input{
+  width: 350px;
+  height: 45px;
+  border: none;
+  border-radius: 10px;
+  background: antiquewhite;
+  font-weight: bolder;
+  font-size: 17px;
+  padding-left: 20px;
+}
+
+.inputdiv button{
+  margin-right: 300px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+#image1{
+  width: 350px;
+  height: 90px;
+  border-radius: 12px;
+}
+
+#image1:hover{
+  width: 352px;
+  height: 97px;
+  border-radius: 12px;
+}
+
+
+.head img{
+  width: 250px;
+  height: 250px;
+  border-radius: 180px;
+  background: whitesmoke;
+  cursor: pointer;
+}
+
+.tail img{
+  width: 250px;
+  height: 250px;
+  border-radius: 180px;
+  background: rgb(190, 180, 118);
+  cursor: pointer;
+}
+
+#js-name{
+font-weight: bolder;
+font-style: oblique;
+font-family: Arial, Helvetica, sans-serif;
+padding-left: 20px;
+font-size: 25px;
+}
+
+.clickbutton{
+  display: flex;
+  width: 400px;
+  justify-content: space-around;
+}
+
+.coin{
+  margin-left: 80px;
+  height: 250px;
+  flex-direction: column;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  animation: spin-tail 5s forwards;
+  animation: spin-head 5s forwards;
+}
+
+.head,.tail{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+          backface-visibility:hidden;
+}
+
+.tail{
+  transform: rotateX(180deg);
+}
+
+@keyframes spin-tail{
+  0% {
+    transform: rotateX(0deg);
+  }
+  100% {
+    transform: rotateX(1980deg);
+  }
+}
+
+@keyframes spin-head{
+  0% {
+    transform: rotateX(0deg);
+  }
+  100% {
+    transform: rotateX(2160deg);
+  }
+}
+
+
+#img1 {
+  height: 55px;
+  width: 190px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+#img1:hover{
+  height: 60px;
+  width: 192px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.clickbutton button{
+  border: none;
+  background: transparent;
+  border-radius: 15px;
+}
+
+#reset img{
+  border-radius: 15px;
+  height: 85px;
+  width: 400px;
+}
+
+#reset img:hover{
+  border-radius: 15px;
+  height: 95px;
+}
+
+#reset{
+  cursor: pointer;
+  border: none;
+  background: transparent;
+}
+
+#image2{
+  width: 405px;
+  height: 95px;
+}
+
+#img11{
+  height: 90px;
+  width: 300px;
+  border-radius: 25px;
+}
+
+.overallcontainer{
+  display: flex;
+  gap: 20px;
+}
+
+.overallcontainer2{
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+</style>
+
+<body>
+  <div class="overallcontainer">
+    <div class="overallcontainer1">
+
+      <img src="/LEARN.JSCRIPT/LEARN.JS/photos/header.png" id="image2">
+
+      <div class="inputdiv">
+        <input type="text" placeholder="enter gamername..."
+          id="js-username">
+          <button id="userName">
+            <img src="/LEARN.JSCRIPT/LEARN.JS/photos/RESET2.jpg" 
+            id="image1">
+          </button>
+      </div>
+
+          <p id = js-name></p>
+          
+        <div class="coin">
+          <div class="head">
+            <img src="/LEARN.JSCRIPT/LEARN.JS/photos/images (2).jpg">
+          </div>
+          
+          <div class="tail">
+            <img src="/LEARN.JSCRIPT/LEARN.JS/photos/R.png">
+          </div>
+        </div>
+
+        <div class="clickbutton">
+          <button id="click1">
+            <img src="/LEARN.JSCRIPT/LEARN.JS/photos/image3.png"
+            id="img1">
+          </button>
+          
+          <button id="click2">
+            <img src="/LEARN.JSCRIPT/LEARN.JS/photos/R.png"
+            id="img1">
+          </button>
+        </div>
+
+        <div><button id="reset">
+          <img src="/LEARN.JSCRIPT/LEARN.JS/photos/RESET44.png">
+        </button></div>
+    </div>
+
+    <div class="overallcontainer2">
+      <img src="/LEARN.JSCRIPT/LEARN.JS/photos/score p.png" id="img11">
+        <p id="js-score">0</p>
+      <img src="/LEARN.JSCRIPT/LEARN.JS/photos/score c.png" id="img11">
+        <p id="js-score1">0</p>
+
+    </div>
+  </div>
+
+
+
+</body>
+<script src="practise.js"></script>
+</html>

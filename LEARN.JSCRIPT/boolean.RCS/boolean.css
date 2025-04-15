@@ -1,0 +1,79 @@
+body{
+    margin: 100px;
+}
+
+
+
+
+#myh1 {
+    color: white ;
+}
+
+#myh2 {
+    color: white ;
+}
+
+.div label{
+    color:  rgb(248, 227, 227);   
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.div button{
+    border: none;
+    height: 35px;
+    width: 150px;
+    border-radius: 9px;
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: bolder;
+    margin-left: 220px;
+    margin-top: 10px;
+}
+
+#click:hover{
+    border: none;
+    height: 39px;
+    width: 155px;
+    border-radius: 9px;
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: bolder;
+    background: antiquewhite;
+}
+
+.div input{
+    width: 200px;
+    border-radius: 8px;
+    border: none;
+    height: 40px;
+    background: aliceblue;
+    padding-left: 10px;
+    font-weight: bolder;
+}
+
+img {
+    height: 120px;
+    width: 120px;
+    border-radius: 65px;
+   cursor: pointer;
+}
+
+.div1{
+    display: flex;
+    gap: 20px;
+    flex-direction: row;
+    margin-top: 50px;
+}
+
+.buttons{
+    background-color: transparent;
+    border: none;
+    height: 120px;
+    width: 120px;
+    border-radius: 65px;
+    cursor: pointer;
+}
+
+    
+

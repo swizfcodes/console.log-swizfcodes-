@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event-list </title>
+</head>
+<style>
+
+    body{
+        margin: 50px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    p{
+        font-size: 23px;
+        color: rgb(241, 239, 239);
+        font-weight: bolder;
+    }
+
+    .text{
+        font-size: 25px;
+        color: rgb(204, 240, 240);
+        font-weight: bolder;
+        font-style: italic;
+        cursor: none;
+    }
+
+    #js-input-date{
+        border: none;
+        height: 35px;
+        background: rgb(10, 6, 0);
+        border-radius: 8px;
+        padding-left: 5px;
+        cursor: pointer;
+    }
+
+    #js-input-todo{
+        border: none;
+        height: 35px;
+        background: rgb(10, 6, 0);
+        border-radius: 8px;
+        padding-left: 5px;
+    }
+
+    button{
+        border: none;
+        height: 35px;
+        width: 100px;
+        background: rgb(192, 235, 175);
+        border-radius: 8px;
+        padding-left: 5px;
+        cursor: pointer;
+    }
+
+    .delete{
+        border: none;
+        height: 35px;
+        width: 100px;
+        background: rgb(112, 4, 4);
+        border-radius: 8px;
+        padding-left: 5px;
+        cursor: pointer;
+    }
+
+    #js-list,
+    #js-input{
+        display: grid;
+        grid-template-columns: 200px 120px 100px;
+        row-gap: 8px;
+        column-gap: 8px;
+        align-items: center;
+    }
+</style>
+<body>
+    <p class="text"> Event Schedule list</p>
+    <div id="js-input">
+        <input placeholder="event name..."
+            id="js-input-todo">
+        <input type="date"
+            id="js-input-date"> 
+        <button id="click">ADD</button>   
+    </div>
+    
+    <div id="js-list"> </div>
+</body>
+<script src="todo list.js"></script>
+</html> 

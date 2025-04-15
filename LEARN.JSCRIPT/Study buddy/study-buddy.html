@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Buddy</title>
+    <link rel="stylesheet" href="study-buddy.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Study Buddy</div>
+            <ul>
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#login">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="active">
+            <h1>Boost Your Study Efficiency</h1>
+            <p>Find the perfect study partner and maximize your learning potential.</p>
+            <button id="get-started-btn">Get Started</button>
+        </section>
+
+        <section id="features">
+            <h2>Our Features</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h3>Smart Partner Matching</h3>
+                    <p>Our algorithm pairs you with the ideal study buddy based on your goals and preferences.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Virtual Study Rooms</h3>
+                    <p>Collaborate in real-time with video chat and shared workspaces.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Pomodoro Timer</h3>
+                    <p>Stay focused and productive with our customizable Pomodoro timer.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Progress Tracking</h3>
+                    <p>Monitor your study habits and achievements with detailed analytics.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="login">
+            <h2>Login</h2>
+            <form id="login-form">
+                <input type="email" id="email" placeholder="Email" required>
+                <input type="password" id="password" placeholder="Password" required>
+                <button type="submit">Log In</button>
+            </form>
+            <p>Don't have an account? <a href="#" id="show-register">Register</a></p>
+        </section>
+
+        <section id="register">
+            <h2>Create Account</h2>
+            <form id="register-form">
+                <input type="text" id="username" placeholder="Username" required>
+                <input type="email" id="reg-email" placeholder="Email" required>
+                <input type="password" id="reg-password" placeholder="Password" required>
+                <input type="password" id="confirm-password" placeholder="Confirm Password" required>
+                <button type="submit">Sign Up</button>
+            </form>
+            <p>Already have an account? <a href="#" id="show-login">Login</a></p>
+        </section>
+
+        <section id="dashboard" class="hidden">
+            <h2>Welcome, <span id="user-name"></span>!</h2>
+            <div class="dashboard-grid">
+                <div class="dashboard-card" id="find-partner">
+                    <h3>Find Study Partner</h3>
+                    <button id="match-btn">Start Matching</button>
+                    <div id="match-result" class="hidden"></div>
+                </div>
+                <div class="dashboard-card" id="pomodoro">
+                    <h3>Pomodoro Timer</h3>
+                    <div id="timer">25:00</div>
+                    <button id="start-timer">Start</button>
+                    <button id="reset-timer">Reset</button>
+                </div>
+                <div class="dashboard-card" id="progress">
+                    <h3>Study Progress</h3>
+                    <canvas id="progress-chart"></canvas>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Study Buddy. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="study-buddy.js"></script>
+</body>
+</html>
+

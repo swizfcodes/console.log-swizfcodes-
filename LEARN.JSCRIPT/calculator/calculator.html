@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swizfcodes calculator</title>
+</head>
+<style>
+
+    body{
+        color: black;
+        display: flex;
+        margin: 50px;
+        justify-content: center;
+    }
+
+    .overalldiv{
+        width: 300px;
+        border: solid 5px rgb(69, 67, 67);   
+        display: flex;
+        flex-direction: column; 
+        gap: 2px; 
+        border-radius: 8px;
+        
+    }
+
+    .displaydiv{
+        display: flex;
+        justify-content: center;
+    }
+
+    .displaydiv input{
+        width: 290px;
+        height: 55px;
+        border: solid 2px whitesmoke;
+        border-radius: 8px;
+        text-align: right;
+        font-size: 30px;
+        color: bisque;
+    }
+
+    .operatordiv{
+        width: 296px;
+        height: 45px;
+        border: solid 2px whitesmoke;
+        border-radius: 2px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .operatordiv button{
+        height: 40px;
+        width: 50px;
+        font-size: 30px;
+        cursor: pointer;
+        background-color: rgb(59, 158, 59);
+        border: none;
+        border-radius: 5px;
+    }
+
+    .operatordiv button:hover{
+        background-color: rgb(189, 219, 189);
+        border: none;
+        border-radius: 10px;
+    }
+
+    .buttonnuminputdiv{
+        height: 250px;
+        width: 289px;
+        display: flex;     
+        gap: 30px; 
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .buttonnuminputdiv button{
+        height: 30px;
+        width: 50px;
+        cursor: pointer;
+        font-size: 20px;
+        border-radius: 7px;
+        border: none;
+            
+    }
+
+    button:hover{
+        background-color: rgba(236, 209, 209, 0.947);
+        border-radius: 10px;
+        border: none;
+        height: 33px;
+        width: 53px;
+    }
+</style>
+
+<body>
+    <div class="overalldiv" >
+        <div class="displaydiv">
+            <input id="display" readonly></input>
+        </div>
+            <div class="operatordiv">
+                <button  onclick="appendToDisplay('+')">+</button>
+                <button  onclick="appendToDisplay('-')">-</button>
+                <button  onclick="appendToDisplay('*')">*</button>
+                <button  onclick="appendToDisplay('/')">/</button>
+                <button  onclick="calculate()">=</button>
+            </div>
+                <div class="buttonnuminputdiv">
+                    <button  onclick="appendToDisplay('1')">1</button>
+                    <button  onclick="appendToDisplay('2')">2</button>
+                    <button  onclick="appendToDisplay('3')">3</button>
+                    <button  onclick="appendToDisplay('4')">4</button>
+                    <button  onclick="appendToDisplay('5')">5</button>
+                    <button  onclick="appendToDisplay('6')">6</button>
+                    <button  onclick="appendToDisplay('7')">7</button>
+                    <button  onclick="appendToDisplay('8')">8</button>
+                    <button  onclick="appendToDisplay('9')">9</button>
+                    <button  onclick="appendToDisplay('0')">0</button>
+                    <button  onclick="appendToDisplay('.')">.</button>
+                    <button  onclick="clearDisplay()">clr</button>
+                </div>        
+    </div>
+</body>
+<script src="calculator.js"></script>
+</html>
