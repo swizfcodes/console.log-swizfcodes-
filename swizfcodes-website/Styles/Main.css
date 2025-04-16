@@ -937,3 +937,171 @@ form .focus{
   border-style: solid;
   border-color: transparent transparent white transparent;
 }
+
+@media (max-width: 1024px) {
+  html {
+    font-size: 90%;
+  }
+
+  section {
+    padding: 120px 5% 32px;
+  }
+
+  .home-content h1 {
+    font-size: 72px;
+  }
+
+  .home-content h3 {
+    font-size: 32px;
+  }
+
+  .btn-box a {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+
+  .about-img img {
+    width: 90%;
+  }
+
+  .education-box,
+  .skills-row {
+    flex-direction: column;
+  }
+
+  .education-column,
+  .skills-column {
+    width: 100%;
+  }
+
+  .skills-box {
+    padding: 16px;
+  }
+
+  .skills-content {
+    padding: 12px;
+  }
+
+  .contact form .input-box {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .contact form .input-box input {
+    width: 100%;
+  }
+
+  .contact form textarea {
+    height: 150px;
+  }
+}
+
+/* Small Screens (Phones and small tablets) */
+@media (max-width: 768px) {
+  html {
+    font-size: 85%;
+  }
+
+  .home {
+    flex-direction: column;
+    text-align: center;
+    gap: 24px;
+  }
+
+  .home-img img {
+    width: 80%;
+  }
+
+  .home-content h1 {
+    font-size: 48px;
+  }
+
+  .home-content h3 {
+    font-size: 24px;
+  }
+
+  .btn-box {
+    flex-direction: column;
+    width: 100%;
+    gap: 16px;
+    height: auto;
+  }
+
+  .btn-box a {
+    width: 100%;
+    text-align: center;
+  }
+
+  .social-media {
+    justify-content: center;
+  }
+
+  .about {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-img img {
+    width: 70%;
+    margin: 0 auto;
+  }
+
+  .about-content h2 {
+    font-size: 36px;
+  }
+
+  .skills-content .progress h3 {
+    font-size: 16px;
+  }
+
+  .tooltip {
+    display: none;
+  }
+
+  .contact form .btn-box {
+    flex-direction: column;
+  }
+
+  .footer-text {
+    text-align: center;
+    font-size: 14px;
+  }
+}
+
+/* Extra Small Screens (Phones under 480px) */
+@media (max-width: 480px) {
+  html {
+    font-size: 80%;
+  }
+
+  .home-content h1 {
+    font-size: 36px;
+  }
+
+  .home-content h3 {
+    font-size: 20px;
+  }
+
+  .about-content h2 {
+    font-size: 28px;
+  }
+
+  .btn-box a {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .contact form textarea,
+  .contact form input {
+    font-size: 14px;
+  }
+
+  .skills-box {
+    width: 100%;
+    padding: 12px;
+  }
+
+  .footer-text {
+    font-size: 12px;
+  }
+}
