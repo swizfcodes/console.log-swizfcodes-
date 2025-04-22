@@ -27,7 +27,7 @@ body{
   padding-top: 35px;
 }
 
-/* Responsive base font size for scaling on different devices */
+
 @media screen and (max-width: 768px) {
   html {
     font-size: 9px;
