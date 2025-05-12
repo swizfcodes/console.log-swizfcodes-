@@ -189,7 +189,7 @@ section {
   width: 100%;
   max-width: 550px;
   height: 350px;
-  background-color: var(--bg-color);
+  background-color: var(--second-bg-color);
   color: #fff;
   border: 2px solid transparent;
   border-radius: 12px;
@@ -1192,7 +1192,7 @@ form .focus{
 
 
   .projects-grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     width: 100%; /* Optional: adjust if needed */
   }
 
@@ -1350,7 +1350,7 @@ form .focus{
   }
 
   .projects-grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     width: 100%; /* Optional: adjust if needed */
   }
 
@@ -1995,6 +1995,10 @@ form .focus{
     font-size: 22px;
     text-align: center;
     word-wrap: break-word;
+  }
+
+  .btn-box{
+   height: 8rem;
   }
 
   .btn-box a {
