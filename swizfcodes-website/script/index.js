@@ -125,7 +125,7 @@
         });
 
         document.querySelectorAll(
-          '.home-content, .projects, .projects-grid, .neon-project-card, .blog-div, .blogs-articles-header, .blog-article'
+          '.button-group, .home-content, .projects, .projects-grid, .neon-project-card, .blog-div, .blogs-articles-header, .blog-article'
         ).forEach(section => {
           sectionObserver.observe(section);
         });

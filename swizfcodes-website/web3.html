@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SwizfCodes</title>
+  <link rel="stylesheet" href="Styles/web3.css">
+
+    <!--box-icons-->
+    <link  href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+
+    <!--fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+  <!-- header design-->
+  <header>
+    <div class="web3-header">
+      <img src="/swizfcodes-website/photos/SwizfcodeS-pfp2.png" alt="pfp">
+
+      <div class="web3-bio">
+        <h1>It's Your Bro,</h1>
+        <h1>SwizfCodes</h1>
+        <p>Airdrop Hunter  &#771  Web3 Developer</p>
+      </div>
+    </div>
+    
+
+    <nav class="web3-navbar">
+      <a href="http://swizfcodes.github.io/swizfcodes-website/index.html">View PORTFOLIO</a>
+      <a href="https://github.com/swizfcodes">View GITHUB</a>
+    </nav>
+  </header>
+
+  <!-- web3 section -->
+   <section>
+    <div class="web3-content">
+      <h2>Welcome to my Web3 page!</h2> 
+        <p> Here, I share my journey into the world of decentralized technologies and blockchain development. I am passionate about exploring the potential of Web3 and its impact on the future of the internet.</p>
+      <p>Feel free to connect with me on social media or check out my projects on GitHub!</p>
+    </div>
+
+
+  <div class="airdrops-section">
+    <h2>🎉 Airdrops Claimed</h2>
+    <div class="airdrop-wrapper">
+      <div class="airdrop-grid" id="airdropGrid">
+        <div class="airdrop-card">
+          <h3>NOT Coin</h3>
+          <p>Claimed: 5,600 $NOT</p>
+          <span class="tag success">✅ Claimed</span>
+        </div>
+        <div class="airdrop-card">
+          <h3>HAMSTER Combat</h3>
+          <p>Claimed: 1900 $HMSTR</p>
+          <span class="tag success">✅ Claimed</span>
+        </div>
+        <div class="airdrop-card">
+          <h3>Give REP</h3>
+          <p>Pending eligibility check</p>
+          <span class="tag pending">⏳ Pending</span>
+        </div>
+        <div class="airdrop-card">
+          <h3>NOT Coin</h3>
+          <p>Claimed: 5,600 $NOT</p>
+          <span class="tag success">✅ Claimed</span>
+        </div>
+        <div class="airdrop-card">
+          <h3>HAMSTER Combat</h3>
+          <p>Claimed: 1900 $HMSTR</p>
+          <span class="tag success">✅ Claimed</span>
+        </div>
+        <div class="airdrop-card">
+          <h3>Give REP</h3>
+          <p>Pending eligibility check</p>
+          <span class="tag pending">⏳ Pending</span>
+        </div>
+      </div>
+
+      <div class="scroll-indicators">
+        <span class="active"></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </div>
+
+      
+
+
+    <!--<div class="web3-projects">
+      <h2>My Projects</h2>
+       <div class="project-cards">
+        <a href="#" class="project-card">Project 1</a>
+        <a href="#" class="project-card">Project 2</a>
+        <a href="#" class="project-card">Project 3</a>
+      </div>
+    </div>-->
+  </section>
+   
+</body>
+<script>
+  const grid = document.getElementById('airdropGrid');
+  const indicators = document.querySelectorAll('.scroll-indicators span');
+  const cardWidth = 286; // 270 + 16 gap
+  const scrollInterval = 3000;
+  const cardCount = grid.children.length;
+  let scrollPosition = 0;
+
+  function updateIndicators(index) {
+    indicators.forEach((dot, i) => {
+      dot.classList.toggle('active', i === index % cardCount);
+    });
+  }
+
+  function autoScroll() {
+    scrollPosition += cardWidth;
+
+    if (scrollPosition >= cardCount * cardWidth) {
+      scrollPosition = 0;
+    }
+
+    grid.scrollTo({ left: scrollPosition, behavior: 'smooth' });
+    const activeIndex = Math.round(scrollPosition / cardWidth);
+    updateIndicators(activeIndex);
+  }
+
+  let scrollTimer = setInterval(autoScroll, scrollInterval);
+
+  // Pause on touch
+  grid.addEventListener('touchstart', () => clearInterval(scrollTimer));
+  grid.addEventListener('touchend', () => {
+    scrollTimer = setInterval(autoScroll, scrollInterval);
+  });
+
+  // Sync indicators manually
+  grid.addEventListener('scroll', () => {
+    const index = Math.round(grid.scrollLeft / cardWidth);
+    updateIndicators(index % cardCount);
+  });
+</script>
+
+
+</html>
